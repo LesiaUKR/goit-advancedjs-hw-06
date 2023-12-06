@@ -3,29 +3,29 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-enum WeekDays {
-  monday = "Monday",
-  tuesday = "Tuesday",
-  wednesday = "Wednesday",
-  thursday = "Thursday",
-  friday = "Friday",
-  saturday = "Saturday",
-  sunday = "Sunday",
+const enum WeekDays {
+  Monday = "Monday",
+  Tuesday = "Tuesday",
+  Wednesday = "Wednesday",
+  Thursday = "Thursday",
+  Friday = "Friday",
+  Saturday = "Saturday",
+  Sunday = "Sunday",
 }
 
 function isWeekend(weekDay: WeekDays): boolean {
   switch (weekDay) {
-    case WeekDays.monday:
-    case WeekDays.tuesday:
-    case WeekDays.wednesday:
-    case WeekDays.thursday:
-    case WeekDays.friday:
+    case WeekDays.Monday:
+    case WeekDays.Tuesday:
+    case WeekDays.Wednesday:
+    case WeekDays.Thursday:
+    case WeekDays.Friday:
       return false;
-    case WeekDays.saturday:
-    case WeekDays.sunday:
+    case WeekDays.Saturday:
+    case WeekDays.Sunday:
       return true;
   }
 }
 
-const today: WeekDays = WeekDays.monday;
+const today: WeekDays = WeekDays.Monday;
 console.log(`Is ${today} a weekend? ${isWeekend(today)}`);
